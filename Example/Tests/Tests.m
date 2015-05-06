@@ -6,40 +6,41 @@
 //  Copyright (c) 2014 Thiago Lioy. All rights reserved.
 //
 
+#import "CreditCardBinChecker.h"
+
 SpecBegin(InitialSpecs)
 
 describe(@"these will fail", ^{
 
-    it(@"can do maths", ^{
-        expect(1).to.equal(2);
+
+    __block NSArray *visaCards;
+    __block NSArray *amexCards;
+    __block NSArray *masterCards;
+    __block NSArray *dinersCards;
+    __block NSArray *invalidCards;
+
+    beforeAll(^{
+        amexCards = @[@"370833132459070",
+                      @"373244752456395",
+                      @"372099666942950",
+                      @"379225137633836",
+                      @"373008221055736",
+                      @"378097145936480",
+                      @"374066062731665",
+                      @"371280216989656",
+                      @"377518676370790",
+                      @"370833132459070"
+                      ];
+
+    });
+    
+    it(@"should validate amex cards", ^{
+
+        expect(1).to.equal(1);
+
     });
 
-    it(@"can read", ^{
-        expect(@"number").to.equal(@"string");
-    });
-    
-    it(@"will wait for 10 seconds and fail", ^{
-        waitUntil(^(DoneCallback done) {
-        
-        });
-    });
 });
 
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
-    });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^{
-        waitUntil(^(DoneCallback done) {
-            done();
-        });
-    });
-});
 
 SpecEnd
