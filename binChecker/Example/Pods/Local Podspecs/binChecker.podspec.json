@@ -1,0 +1,25 @@
+{
+  "name": "binChecker",
+  "version": "0.1.0",
+  "summary": "A short description of binChecker.",
+  "description": "                       An optional longer description of binChecker\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/binChecker",
+  "license": "MIT",
+  "authors": {
+    "Thiago Lioy": "lioyufrj@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/binChecker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "binChecker": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
