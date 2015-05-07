@@ -19,8 +19,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shareManager = [[self alloc] init];
-        
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CreditCardBins" ofType:@"json"];
+
+        NSString * filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"CreditCardBins" ofType:@"json"];
         NSData* data = [NSData dataWithContentsOfFile:filePath];
         
         NSError *jsonError = nil;
