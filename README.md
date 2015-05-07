@@ -1,6 +1,6 @@
 # binChecker
 
-[![CI Status](http://img.shields.io/travis/Thiago Lioy/binChecker.svg?style=flat)](https://travis-ci.org/Thiago Lioy/binChecker)
+[![CI Status](http://img.shields.io/travis/thiagolioy/binChecker.svg?style=flat)](https://travis-ci.org/thiagolioy/binChecker)
 [![Version](https://img.shields.io/cocoapods/v/binChecker.svg?style=flat)](http://cocoapods.org/pods/binChecker)
 [![License](https://img.shields.io/cocoapods/l/binChecker.svg?style=flat)](http://cocoapods.org/pods/binChecker)
 [![Platform](https://img.shields.io/cocoapods/p/binChecker.svg?style=flat)](http://cocoapods.org/pods/binChecker)
