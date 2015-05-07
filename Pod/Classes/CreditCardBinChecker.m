@@ -19,12 +19,43 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shareManager = [[self alloc] init];
-
-        NSString * filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"CreditCardBins" ofType:@"json"];
-        NSData* data = [NSData dataWithContentsOfFile:filePath];
-        
-        NSError *jsonError = nil;
-        shareManager.binRules = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+        shareManager.binRules = @[
+                                  @{
+                                      @"issuer": @"visa",
+                                      @"initNumber": @[@4],
+                                      @"maxNumbers": @[@13, @14, @15, @16],
+                                      @"maxSecurityCardCode": @3,
+                                      @"regex": @"^4"
+                                      },
+                                  @{
+                                      @"issuer": @"master",
+                                      @"initNumber": @[@5],
+                                      @"maxNumbers": @[@16],
+                                      @"maxSecurityCardCode": @3,
+                                      @"regex": @"^5[1-5]"
+                                  },
+                                  @{
+                                      @"issuer": @"amex",
+                                      @"initNumber": @[@34,@37],
+                                      @"maxNumbers": @[@15],
+                                      @"maxSecurityCardCode": @4,
+                                      @"regex": @"^3[47]"
+                                  },
+                                  @{
+                                      @"issuer": @"diners",
+                                      @"initNumber": @[@301,@302,@303,@304,@305,@309,@36,@38,@39],
+                                      @"maxNumbers": @[@14,@16],
+                                      @"maxSecurityCardCode": @3,
+                                      @"regex": @"^3(?:0[0-59]|[689])"
+                                  },
+                                  @{
+                                      @"issuer": @"hiper",
+                                      @"initNumber": @[@38,@60],
+                                      @"maxNumbers": @[@12,@16,@19],
+                                      @"maxSecurityCardCode": @3,
+                                      @"regex" : @"^(606282|637095|3841[046]0)"
+                                  }
+                                  ];
         
     });
     return shareManager;
