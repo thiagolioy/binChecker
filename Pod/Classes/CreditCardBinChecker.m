@@ -96,7 +96,7 @@
 +(BOOL)checkNumber:(NSString*)cardNumber{
     BOOL odd = true;
     int sum = 0;
-    for (int i = cardNumber.length - 1; i >= 0; i --) {
+    for (NSInteger i = cardNumber.length - 1; i >= 0; i --) {
         int digitInt = [[NSString stringWithFormat:@"%c", [cardNumber characterAtIndex:i]] intValue];
         
         if ((odd = !odd))
